@@ -1,0 +1,9 @@
+id,statement,status,evidence
+Obj 1,Discovery module using cloud SDKs,Partial,"IaC-based discovery across AWS/Azure/GCP (1,009 findings, 340 resources). Live SDK enumeration not implemented."
+Obj 2,Fine-tune an open-source SLM with LoRA,Met,"Qwen2.5-3B, QLoRA r=16. Test tau 0.745 vs 0.066 untrained and 0.288 one-shot; p<0.001."
+Obj 3,Unified schema and structured ranked reports,Met,UFS implemented; ranked JSON at 100% validity; explanations in 100% of responses; grounding precision 0.595.
+Obj 4,Evaluate against expert judgement,Met,"Test evaluation with resource-clustered CIs. 2 raters, Kendall's W 0.984; model vs expert consensus tau 0.848."
+Obj 5,Derive design principles,Partial,Design decisions DD-001 to DD-014 recorded. Practitioner validation outstanding.
+RQ1,Automated multi-cloud attack-surface discovery,Partial,Demonstrated on IaC across three providers. Runtime enumeration is future work.
+RQ2,Can an SLM prioritise like an expert?,Answered,Test tau 0.745 against rule-derived gold; tau 0.848 against independent expert consensus over 6 sets.
+RQ3,Design principles for such a system,Partial,Decision log maintained; synthesis and practitioner review outstanding.

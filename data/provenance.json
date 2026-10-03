@@ -1,0 +1,32 @@
+{
+  "terragoat": {
+    "url": "https://github.com/bridgecrewio/terragoat.git",
+    "commit": "729f8da62c6a85ce4af5ad3d123de97776d954c4",
+    "terraform_files": 47
+  },
+  "awsgoat": {
+    "url": "https://github.com/ine-labs/AWSGoat.git",
+    "commit": "b24869ad455ed8d1393d00ecdc15ee638d1c1332",
+    "terraform_files": 2
+  },
+  "azuregoat": {
+    "url": "https://github.com/ine-labs/AzureGoat.git",
+    "commit": "b97045952e6df00de735a7f27fd7c4994dcfe8c0",
+    "terraform_files": 1
+  },
+  "gcpgoat": {
+    "url": "https://github.com/ine-labs/GCPGoat.git",
+    "commit": "44605c4bff4b2da7611dfce78696bb53db6d8c54",
+    "terraform_files": 1
+  },
+  "iam-vulnerable": {
+    "url": "https://github.com/BishopFox/iam-vulnerable.git",
+    "commit": "0f298666f9b7cfa01488b86912afdb211773188a",
+    "terraform_files": 59
+  },
+  "cnappgoat": {
+    "url": "https://github.com/ermetic-research/cnappgoat-scenarios.git",
+    "commit": "c98acdac710f03726e14ac1014c14bf5086659e0",
+    "terraform_files": 0
+  }
+}

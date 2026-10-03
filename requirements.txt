@@ -1,0 +1,14 @@
+numpy
+pandas
+scipy
+pydantic>=2.0
+pyarrow
+checkov==3.3.8        # static scan of the IaC repositories (notebook 01)
+transformers==4.49.0
+peft==0.14.0
+bitsandbytes>=0.45.2
+accelerate
+datasets
+matplotlib
+seaborn
+streamlit             # only for app/app.py

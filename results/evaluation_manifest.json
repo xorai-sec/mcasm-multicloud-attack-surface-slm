@@ -1,0 +1,194 @@
+{
+  "created_utc": "2026-08-03T08:17:23.251264+00:00",
+  "notebook": "05_test_evaluation_and_experts.ipynb",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "adapter": "/content/mcasm_project/adapter",
+  "gpu": "Tesla T4",
+  "vram_gib": 14.6,
+  "stage4_validation": {
+    "tau_b": 0.647,
+    "ci_lo": 0.6023,
+    "ci_hi": 0.6892,
+    "json_validity": 1.0,
+    "ssvc_acc": 0.8064,
+    "stability": 0.6756
+  },
+  "stage5_test": {
+    "tau_b": 0.7446,
+    "json_validity": 1.0,
+    "ssvc_acc": 0.8037,
+    "stability": 0.6801
+  },
+  "generalisation_gap_tau": 0.09760000000000002,
+  "baselines": [
+    {
+      "arm": "B3_composite",
+      "tau_b": 0.9407727827727828,
+      "ci_lo": 0.9306812567062568,
+      "ci_hi": 0.9507214498464498,
+      "spearman": 0.9723517560870502,
+      "ndcg@5": 0.9815106414581669,
+      "p@3": 0.8733333333333333,
+      "n": 150
+    },
+    {
+      "arm": "B1_alphabetical",
+      "tau_b": 0.12276297776297776,
+      "ci_lo": 0.08486896806896807,
+      "ci_hi": 0.16322635697635696,
+      "spearman": 0.1453783602018896,
+      "ndcg@5": 0.683364170276796,
+      "p@3": 0.31555555555555553,
+      "n": 150
+    },
+    {
+      "arm": "B0_random",
+      "tau_b": -0.01431553631553632,
+      "ci_lo": -0.05016420431420431,
+      "ci_hi": 0.022630675805675807,
+      "spearman": -0.023808286484757076,
+      "ndcg@5": 0.6139883751081837,
+      "p@3": 0.23333333333333334,
+      "n": 150
+    }
+  ],
+  "evaluation": {
+    "instances": 60,
+    "n_shuffles": 2,
+    "generation_cap": 722,
+    "split": "test"
+  },
+  "grounding": {
+    "mean": 0.595,
+    "responses_with_explanations": 1.0
+  },
+  "expert_study": {
+    "findings_sampled": 45,
+    "sets": 6,
+    "raters_returned": 2,
+    "kendalls_w_mean": 0.9837301587301588,
+    "kendalls_w_per_set": [
+      {
+        "set_id": "SET-1",
+        "raters": 2,
+        "items": 8,
+        "kendalls_w": 0.9642857142857144
+      },
+      {
+        "set_id": "SET-2",
+        "raters": 2,
+        "items": 8,
+        "kendalls_w": 1.0
+      },
+      {
+        "set_id": "SET-3",
+        "raters": 2,
+        "items": 8,
+        "kendalls_w": 1.0
+      },
+      {
+        "set_id": "SET-4",
+        "raters": 2,
+        "items": 8,
+        "kendalls_w": 0.988095238095238
+      },
+      {
+        "set_id": "SET-5",
+        "raters": 2,
+        "items": 8,
+        "kendalls_w": 1.0
+      },
+      {
+        "set_id": "SET-6",
+        "raters": 2,
+        "items": 5,
+        "kendalls_w": 0.95
+      }
+    ],
+    "model_vs_expert_tau": 0.8476190476190476,
+    "results": [
+      {
+        "system": "A3_finetuned",
+        "tau_b": 0.8476190476190476,
+        "spearman": 0.9238095238095237,
+        "n_sets": 6
+      },
+      {
+        "system": "B3_composite",
+        "tau_b": 0.7999999999999999,
+        "spearman": 0.9079365079365079,
+        "n_sets": 6
+      },
+      {
+        "system": "B0_random",
+        "tau_b": -0.3119047619047619,
+        "spearman": -0.34841269841269834,
+        "n_sets": 6
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "id": "Obj 1",
+      "statement": "Discovery module using cloud SDKs",
+      "status": "Partial",
+      "evidence": "IaC-based discovery across AWS/Azure/GCP (1,009 findings, 340 resources). Live SDK enumeration not implemented."
+    },
+    {
+      "id": "Obj 2",
+      "statement": "Fine-tune an open-source SLM with LoRA",
+      "status": "Met",
+      "evidence": "Qwen2.5-3B, QLoRA r=16. Test tau 0.745 vs 0.066 untrained and 0.288 one-shot; p<0.001."
+    },
+    {
+      "id": "Obj 3",
+      "statement": "Unified schema and structured ranked reports",
+      "status": "Met",
+      "evidence": "UFS implemented; ranked JSON at 100% validity; explanations in 100% of responses; grounding precision 0.595."
+    },
+    {
+      "id": "Obj 4",
+      "statement": "Evaluate against expert judgement",
+      "status": "Met",
+      "evidence": "Test evaluation with resource-clustered CIs. 2 raters, Kendall's W 0.984; model vs expert consensus tau 0.848."
+    },
+    {
+      "id": "Obj 5",
+      "statement": "Derive design principles",
+      "status": "Partial",
+      "evidence": "Design decisions DD-001 to DD-014 recorded. Practitioner validation outstanding."
+    },
+    {
+      "id": "RQ1",
+      "statement": "Automated multi-cloud attack-surface discovery",
+      "status": "Partial",
+      "evidence": "Demonstrated on IaC across three providers. Runtime enumeration is future work."
+    },
+    {
+      "id": "RQ2",
+      "statement": "Can an SLM prioritise like an expert?",
+      "status": "Answered",
+      "evidence": "Test tau 0.745 against rule-derived gold; tau 0.848 against independent expert consensus over 6 sets."
+    },
+    {
+      "id": "RQ3",
+      "statement": "Design principles for such a system",
+      "status": "Partial",
+      "evidence": "Decision log maintained; synthesis and practitioner review outstanding."
+    }
+  ],
+  "corrections_from_stage4": [
+    "Grounding lookup keyed by bare finding id; previously keyed by the full pipe-delimited line, which never matched and produced NaN for every arm.",
+    "Raw model output stored at 4000 characters; 300 truncated mid-JSON and broke reconstruction.",
+    "Sampling parameters unset during greedy decoding to remove spurious warnings."
+  ],
+  "limitations": [
+    "Test evaluation covers 60 of 150 instances; CIs are clustered by resource to account for reuse.",
+    "Single training seed; run-to-run variance not measured.",
+    "Rank stability 0.68 indicates residual positional sensitivity constraining autonomous use.",
+    "Grounding precision 0.595 implies a 40% hallucination rate in explanations.",
+    "Expert study used 2 raters over 45 findings; treat as indicative.",
+    "Inter-rater concordance (W = 0.984) is well above the 0.4-0.7 typically reported for vulnerability prioritisation, likely reflecting the prescriptive SSVC rubric and the clear separation of indicator profiles in the sample. It should not be read as evidence that cloud risk prioritisation is generally unambiguous.",
+    "Discovery is IaC-based; runtime SDK enumeration not implemented."
+  ]
+}

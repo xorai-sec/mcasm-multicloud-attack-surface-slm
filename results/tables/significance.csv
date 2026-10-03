@@ -1,0 +1,4 @@
+comparison,mean_difference,p_value,n_pairs,significant
+A3 vs A0,0.5815543715543715,0.0,60,True
+A3 vs A1,0.35942575942575933,0.0,60,True
+A1 vs A0,0.22212861212861207,0.0,60,True

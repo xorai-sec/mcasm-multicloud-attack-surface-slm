@@ -1,0 +1,9 @@
+id,status,score,evidence
+Obj 1,Partial,0.6,IaC-based discovery across three providers; runtime SDK enumeration is future work.
+Obj 2,Met,1.0,"Qwen2.5-3B QLoRA; test tau 0.745 against 0.066 untrained, p < 0.001."
+Obj 3,Met,1.0,"UFS, ranked reports at 100% JSON validity, explanations on every response, Streamlit interface."
+Obj 4,Met,1.0,"Held-out test with clustered CIs; 2 raters, W = 0.984; model vs experts tau 0.848."
+Obj 5,Met,0.85,"12 principles from 14 logged decisions; practitioner instrument built, study not yet run."
+RQ1,Partial,0.6,"Automated discovery demonstrated on IaC across AWS, Azure and GCP."
+RQ2,Answered,1.0,"tau 0.848 vs expert consensus; equivalent to a rule system (p = 0.51), with explanations."
+RQ3,Answered,0.85,12 evidence-traced principles; empirical validation with practitioners outstanding.

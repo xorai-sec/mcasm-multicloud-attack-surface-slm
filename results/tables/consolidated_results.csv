@@ -1,0 +1,21 @@
+stage,measurement,value,note
+NB01,Findings normalised to UFS,"1,009",AWS 699 / Azure 211 / GCP 99
+NB02,Distinct resources after aggregation,340,the independent statistical unit
+NB02,Ranking instances generated,"1,500",1200 train / 150 val / 150 test
+NB02,Cross-split resource leakage,0,asserted for all three pairs
+NB03,Prompt length reduction,87%,"p95 5,500 -> 723 tokens"
+NB04,Untrained baseline (A0),0.066,"95% CI [0.013, 0.120]"
+NB04,One-shot prompting (A1),0.288,"95% CI [0.235, 0.341]"
+NB04,"Fine-tuned, validation (A3)",0.647,"95% CI [0.602, 0.689]"
+NB04,A3 vs A0 significance,p < 0.001,"paired permutation, n=60"
+NB05,"Fine-tuned, held-out test",0.745,"95% CI [0.709, 0.781]"
+NB05,Generalisation gap,+0.098,test exceeds validation
+NB05,JSON output validity,100%,73.3% before fine-tuning
+NB05,SSVC class accuracy,80.4%,6.5% untrained
+NB05,Rank stability,0.680,mean pairwise tau across shuffled orders
+NB05,Grounding precision,0.595,40.5% of claims unsupported
+NB05,Inter-rater concordance,W = 0.984,"2 raters, 45 findings, 6 sets"
+NB05,Model vs expert consensus,0.848,Kendall tau-b
+NB05,Rule system vs expert consensus,0.800,composite reference score
+NB05,Random vs expert consensus,-0.312,floor
+NB05,Model vs rule system difference,p = 0.506,"NOT significant, n=6 sets"

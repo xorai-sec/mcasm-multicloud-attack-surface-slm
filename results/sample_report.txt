@@ -1,0 +1,58 @@
+==========================================================================
+MULTI-CLOUD ATTACK SURFACE — PRIORITISED FINDINGS
+Generated 2026-08-03 09:03 UTC   |   13 findings   |   Qwen2.5-3B + LoRA
+==========================================================================
+
+SUMMARY
+  Track*     4
+  Track      9
+
+PRIORITISED QUEUE
+--------------------------------------------------------------------------
+  1. [Track* ] res-0344ef0b0e7d
+     indicators : data=secrets, cross_account, shared_infra, links=2
+     assessment : data=secrets; cross_account; shared_infra; is referenced by 2
+                  other resource(s)
+
+  2. [Track* ] res-1df9b7d8f33b
+     indicators : links=2
+     assessment : is referenced by 2 other resource(s)
+
+  3. [Track  ] res-7e73bc0d26b0
+     indicators : privesc=1
+     assessment : is referenced by 1 other resource(s)
+
+  4. [Track* ] res-9d31227128e2
+     indicators : privesc=1
+
+  5. [Track* ] res-8725bcaa929f
+     indicators : public, ports=22,3306,3389,5432, shared_infra
+
+  6. [Track  ] res-a0d50b9b1416
+     indicators : priv=admin, wildcard_action
+
+  7. [Track  ] res-96c3036c47fd
+     indicators : links=2
+
+  8. [Track  ] res-058deed59045
+     indicators : links=1
+
+  9. [Track  ] res-974c43bab54b
+     indicators : links=1
+
+ 10. [Track  ] res-4995388362e6
+     indicators : links=1
+
+ 11. [Track  ] res-a5a3b5331d23
+     indicators : links=2
+
+ 12. [Track  ] res-d77bbb9a0008
+     indicators : data=secrets, links=2
+
+ 13. [Track  ] res-a58b0b21b879
+     indicators : no risk indicators
+
+--------------------------------------------------------------------------
+Rankings are advisory. Model rank stability under input reordering is 0.68,
+and 40% of explanation claims were unsupported by the input indicators.
+Analyst review is required before remediation action.

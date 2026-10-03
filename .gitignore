@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+.DS_Store
+# large artefacts: keep out of Git
+data/raw/
+*.zip
+*.safetensors
+*.joblib
+*.pt

@@ -1,0 +1,4 @@
+split,instances,resources,mean_set_size
+train,1200,257,12.0
+validation,150,38,12.1
+test,150,45,11.7

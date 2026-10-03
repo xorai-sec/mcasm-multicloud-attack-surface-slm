@@ -1,0 +1,259 @@
+{
+ "test_00000": {
+  "ranking": [
+   "res-0344ef0b0e7d",
+   "res-1df9b7d8f33b",
+   "res-7e73bc0d26b0",
+   "res-9d31227128e2",
+   "res-8725bcaa929f",
+   "res-a0d50b9b1416",
+   "res-96c3036c47fd",
+   "res-058deed59045",
+   "res-974c43bab54b",
+   "res-4995388362e6",
+   "res-a5a3b5331d23",
+   "res-d77bbb9a0008",
+   "res-a58b0b21b879"
+  ],
+  "ssvc": {
+   "res-0344ef0b0e7d": "Track*",
+   "res-7e73bc0d26b0": "Track",
+   "res-1df9b7d8f33b": "Track*",
+   "res-9d31227128e2": "Track*",
+   "res-8725bcaa929f": "Track*",
+   "res-96c3036c47fd": "Track",
+   "res-4995388362e6": "Track",
+   "res-974c43bab54b": "Track",
+   "res-058deed59045": "Track",
+   "res-a0d50b9b1416": "Track",
+   "res-a5a3b5331d23": "Track",
+   "res-d77bbb9a0008": "Track"
+  },
+  "indicators": {
+   "res-8725bcaa929f": "public, ports=22,3306,3389,5432, shared_infra",
+   "res-4995388362e6": "links=1",
+   "res-058deed59045": "links=1",
+   "res-96c3036c47fd": "links=2",
+   "res-a5a3b5331d23": "links=2",
+   "res-a0d50b9b1416": "priv=admin, wildcard_action",
+   "res-a58b0b21b879": "no risk indicators",
+   "res-0344ef0b0e7d": "data=secrets, cross_account, shared_infra, links=2",
+   "res-9d31227128e2": "privesc=1",
+   "res-7e73bc0d26b0": "privesc=1",
+   "res-974c43bab54b": "links=1",
+   "res-d77bbb9a0008": "data=secrets, links=2",
+   "res-1df9b7d8f33b": "links=2"
+  },
+  "why": {
+   "res-0344ef0b0e7d": "data=secrets; cross_account; shared_infra; is referenced by 2 other resource(s)",
+   "res-1df9b7d8f33b": "is referenced by 2 other resource(s)",
+   "res-7e73bc0d26b0": "is referenced by 1 other resource(s)"
+  },
+  "grounded": {
+   "res-0344ef0b0e7d": 0.5,
+   "res-1df9b7d8f33b": null,
+   "res-7e73bc0d26b0": null
+  }
+ },
+ "test_00001": {
+  "ranking": [
+   "res-49d9c80aae40",
+   "res-20aed1130b15",
+   "res-0344ef0b0e7d",
+   "res-7e73bc0d26b0",
+   "res-838c27ae5cc4",
+   "res-5ecbe6003650",
+   "res-5c900e96798e",
+   "res-c36b9358c05a",
+   "res-f0ad967bbbd7"
+  ],
+  "ssvc": {
+   "res-0344ef0b0e7d": "Track*",
+   "res-20aed1130b15": "Track*",
+   "res-49d9c80aae40": "Track*",
+   "res-7e73bc0d26b0": "Track*",
+   "res-5c900e96798e": "Track",
+   "res-838c27ae5cc4": "Track",
+   "res-5ecbe6003650": "Track",
+   "res-c36b9358c05a": "Track",
+   "res-f0ad967bbbd7": "Track"
+  },
+  "indicators": {
+   "res-c36b9358c05a": "no risk indicators",
+   "res-0344ef0b0e7d": "data=secrets, cross_account, shared_infra, links=2",
+   "res-838c27ae5cc4": "shared_infra, links=1",
+   "res-5c900e96798e": "no risk indicators",
+   "res-20aed1130b15": "data=secrets, links=2",
+   "res-f0ad967bbbd7": "no risk indicators",
+   "res-5ecbe6003650": "links=1",
+   "res-7e73bc0d26b0": "privesc=1",
+   "res-49d9c80aae40": "data=secrets, secret_in_code, links=1"
+  },
+  "why": {
+   "res-49d9c80aae40": "data.secrets (db_secret) contains a hardcoded credential; is referenced by 1 other resource(s)",
+   "res-20aed1130b15": "data.secrets is referenced by 2 other resource(s)",
+   "res-0344ef0b0e7d": "data=secrets, is referenced by 2 other resource(s)"
+  },
+  "grounded": {
+   "res-49d9c80aae40": 1.0,
+   "res-20aed1130b15": 0.0,
+   "res-0344ef0b0e7d": 0.0
+  }
+ },
+ "test_00002": {
+  "ranking": [
+   "res-0344ef0b0e7d",
+   "res-69a1cbff5981",
+   "res-974c43bab54b",
+   "res-30ba172a781f",
+   "res-1df9b7d8f33b",
+   "res-96c3036c47fd",
+   "res-8ecb5aaf27e0",
+   "res-5ecbe6003650",
+   "res-0ab666a7ad3f",
+   "res-eaa5132d64d5",
+   "res-a5a3b5331d23"
+  ],
+  "ssvc": {
+   "res-69a1cbff5981": "Track*",
+   "res-0344ef0b0e7d": "Track",
+   "res-974c43bab54b": "Track",
+   "res-1df9b7d8f33b": "Track",
+   "res-30ba172a781f": "Track",
+   "res-5ecbe6003650": "Track",
+   "res-0ab666a7ad3f": "Track",
+   "res-8ecb5aaf27e0": "Track",
+   "res-96c3036c47fd": "Track"
+  },
+  "indicators": {
+   "res-0ab666a7ad3f": "no risk indicators",
+   "res-0344ef0b0e7d": "data=secrets, cross_account, shared_infra, links=2",
+   "res-30ba172a781f": "links=3",
+   "res-1df9b7d8f33b": "links=2",
+   "res-eaa5132d64d5": "links=1",
+   "res-5ecbe6003650": "links=1",
+   "res-69a1cbff5981": "data=phi, links=3",
+   "res-8ecb5aaf27e0": "links=2",
+   "res-96c3036c47fd": "links=2",
+   "res-a5a3b5331d23": "links=2",
+   "res-974c43bab54b": "links=1"
+  },
+  "why": {
+   "res-0344ef0b0e7d": "data=secrets; is referenced by 2 other resource(s)",
+   "res-69a1cbff5981": "data=phi; is referenced by 3 other resource(s)",
+   "res-974c43bab54b": "is referenced by 1 other resource(s)"
+  },
+  "grounded": {
+   "res-0344ef0b0e7d": 0.0,
+   "res-69a1cbff5981": null,
+   "res-974c43bab54b": null
+  }
+ },
+ "test_00003": {
+  "ranking": [
+   "res-49d9c80aae40",
+   "res-a0d50b9b1416",
+   "res-debee679bec0",
+   "res-7e73bc0d26b0",
+   "res-4fdb4f7907c8",
+   "res-974c43bab54b",
+   "res-ea3f907620bf",
+   "res-dd1930446a3a",
+   "res-0ab666a7ad3f"
+  ],
+  "ssvc": {
+   "res-49d9c80aae40": "Track*",
+   "res-a0d50b9b1416": "Track*",
+   "res-debee679bec0": "Attend",
+   "res-7e73bc0d26b0": "Track*",
+   "res-4fdb4f7907c8": "Track",
+   "res-974c43bab54b": "Track",
+   "res-ea3f907620bf": "Track",
+   "res-dd1930446a3a": "Track"
+  },
+  "indicators": {
+   "res-0ab666a7ad3f": "no risk indicators",
+   "res-4fdb4f7907c8": "data=internal",
+   "res-7e73bc0d26b0": "privesc=1",
+   "res-974c43bab54b": "links=1",
+   "res-ea3f907620bf": "links=2",
+   "res-dd1930446a3a": "links=1",
+   "res-49d9c80aae40": "data=secrets, secret_in_code, links=1",
+   "res-a0d50b9b1416": "priv=admin, wildcard_action",
+   "res-debee679bec0": "privesc=2"
+  },
+  "why": {
+   "res-49d9c80aae40": "data=secrets; contains a hardcoded credential; is referenced by 1 other resource(s)",
+   "res-a0d50b9b1416": "priv/admin; uses a wildcard action grant",
+   "res-debee679bec0": "requires no directly observable exposure or privilege indicators"
+  },
+  "grounded": {
+   "res-49d9c80aae40": 1.0,
+   "res-a0d50b9b1416": 1.0,
+   "res-debee679bec0": null
+  }
+ },
+ "test_00004": {
+  "ranking": [
+   "res-1756f05fa2d9",
+   "res-e7f5bdc73ba0",
+   "res-0344ef0b0e7d",
+   "res-9d31227128e2",
+   "res-30ba172a781f",
+   "res-2251541ea4c3",
+   "res-177d0c338b28",
+   "res-7e73bc0d26b0",
+   "res-96c3036c47fd",
+   "res-5c900e96798e",
+   "res-5ecbe6003650",
+   "res-974c43bab54b",
+   "res-796e50741314",
+   "res-8725bcaa929f",
+   "res-a5a3b5331d23",
+   "res-bbc963dd14c1"
+  ],
+  "ssvc": {
+   "res-1756f05fa2d9": "Track",
+   "res-0344ef0b0e7d": "Track*",
+   "res-8725bcaa929f": "Track",
+   "res-9d31227128e2": "Track*",
+   "res-177d0c338b28": "Track",
+   "res-5c900e96798e": "Track",
+   "res-7e73bc0d26b0": "Track",
+   "res-796e50741314": "Track",
+   "res-30ba172a781f": "Track",
+   "res-974c43bab54b": "Track",
+   "res-5ecbe6003650": "Track",
+   "res-2251541ea4c3": "Track",
+   "res-96c3036c47fd": "Track"
+  },
+  "indicators": {
+   "res-7e73bc0d26b0": "privesc=1",
+   "res-1756f05fa2d9": "public, ports=22,3306,3389,5432, shared_infra, links=2",
+   "res-a5a3b5331d23": "links=2",
+   "res-bbc963dd14c1": "data=secrets, links=2",
+   "res-9d31227128e2": "privesc=1",
+   "res-5c900e96798e": "no risk indicators",
+   "res-e7f5bdc73ba0": "public, ports=22,3306,3389,5432, shared_infra, links=2",
+   "res-5ecbe6003650": "links=1",
+   "res-974c43bab54b": "links=1",
+   "res-0344ef0b0e7d": "data=secrets, cross_account, shared_infra, links=2",
+   "res-96c3036c47fd": "links=2",
+   "res-2251541ea4c3": "links=2",
+   "res-796e50741314": "no risk indicators",
+   "res-177d0c338b28": "no risk indicators",
+   "res-30ba172a781f": "links=3",
+   "res-8725bcaa929f": "public, ports=22,3306,3389,5432, shared_infra"
+  },
+  "why": {
+   "res-1756f05fa2d9": "res-1756f05fa2d9.webhoster.io (port 22, 3306, 3389, 5432) reachable from the internet; is referenced by 2 other resource(s)",
+   "res-e7f5bdc73ba0": "res-e7f5bdc73ba0.webhoster.io (port 22, 3306, 3389, 5432) reachable from the internet; is referenced by 2 other resource(s)",
+   "res-0344ef0b0e7d": "res-0344ef0b0e7d.db.mysite.com (data.secrets) is referenced by 2 other resource(s)"
+  },
+  "grounded": {
+   "res-1756f05fa2d9": 1.0,
+   "res-e7f5bdc73ba0": 1.0,
+   "res-0344ef0b0e7d": 0.0
+  }
+ }
+}

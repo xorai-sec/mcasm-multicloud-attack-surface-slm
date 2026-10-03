@@ -1,0 +1,131 @@
+{
+  "created_utc": "2026-08-03T05:21:15.919769+00:00",
+  "input_sha256": "d682aa1f710ab53cd9750306f28c21e05fea4ef4672a891bd75d4bde5801665d",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "gpu": "Tesla T4",
+  "vram_gib": 14.6,
+  "training": {
+    "epochs_requested": 2,
+    "epochs_actual": 1.4,
+    "global_steps": 105,
+    "learning_rate": 0.0001,
+    "effective_batch": 16,
+    "best_eval_loss": 0.1612676978111267,
+    "wall_minutes": 321.7,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "trainable_params": 29933568,
+    "max_seq_length": 2048,
+    "gradient_checkpointing": true
+  },
+  "evaluation": {
+    "eval_instances": 60,
+    "n_shuffles": 2,
+    "generation_cap_tokens": 722,
+    "generation_batch": 4,
+    "split": "validation"
+  },
+  "data_integrity": [
+    {
+      "split": "train",
+      "instances": 1200,
+      "resources": 257,
+      "mean_set_size": 12.0
+    },
+    {
+      "split": "validation",
+      "instances": 150,
+      "resources": 38,
+      "mean_set_size": 12.1
+    },
+    {
+      "split": "test",
+      "instances": 150,
+      "resources": 45,
+      "mean_set_size": 11.7
+    }
+  ],
+  "cross_split_overlap": {
+    "train~val": 0,
+    "train~test": 0,
+    "val~test": 0
+  },
+  "results": [
+    {
+      "arm": "A3_finetuned",
+      "tau_b": 0.647025567025567,
+      "ci_lo": 0.6023497682872683,
+      "ci_hi": 0.6891694462944461,
+      "spearman": 0.7617606821283293,
+      "ndcg@5": 0.9445574687931796,
+      "p@3": 0.7944444444444444,
+      "json_validity": 1.0,
+      "ssvc_acc": 0.8064467476967477,
+      "grounding": NaN,
+      "stability": 0.6755809324774841,
+      "n": 60
+    },
+    {
+      "arm": "A1_oneshot",
+      "tau_b": 0.28759980759980763,
+      "ci_lo": 0.23544734894734892,
+      "ci_hi": 0.34060510554260554,
+      "spearman": 0.3833931509666804,
+      "ndcg@5": 0.8168137442790835,
+      "p@3": 0.5321637426900584,
+      "json_validity": 0.95,
+      "ssvc_acc": 0.2467788546735915,
+      "grounding": NaN,
+      "stability": NaN,
+      "n": 60
+    },
+    {
+      "arm": "A0_zeroshot",
+      "tau_b": 0.06547119547119547,
+      "ci_lo": 0.01307689532689533,
+      "ci_hi": 0.1201995966995967,
+      "spearman": 0.08019784137431195,
+      "ndcg@5": 0.6929523829869721,
+      "p@3": 0.3409090909090909,
+      "json_validity": 0.7333333333333333,
+      "ssvc_acc": 0.06445366502184684,
+      "grounding": 0.7450980392156863,
+      "stability": NaN,
+      "n": 60
+    }
+  ],
+  "significance": [
+    {
+      "comparison": "A3 vs A0",
+      "mean_difference": 0.5815543715543715,
+      "p_value": 0.0,
+      "n_pairs": 60,
+      "significant": true
+    },
+    {
+      "comparison": "A3 vs A1",
+      "mean_difference": 0.35942575942575933,
+      "p_value": 0.0,
+      "n_pairs": 60,
+      "significant": true
+    },
+    {
+      "comparison": "A1 vs A0",
+      "mean_difference": 0.22212861212861207,
+      "p_value": 0.0,
+      "n_pairs": 60,
+      "significant": true
+    }
+  ],
+  "limitations": [
+    "Gold rankings are rule-derived, not expert judgement. Results show the model can learn the ranking function, not that the ranking is correct.",
+    "Notebook 03 used test instances for model selection, so evaluation here uses the validation split.",
+    "Single training seed; variance across seeds is not measured.",
+    "Arms A2 and A4 (two-stage training) are future work."
+  ],
+  "next": [
+    "Corpus C: expert annotation by 2-3 raters",
+    "Notebook 05: frozen test-set evaluation",
+    "Notebook 06: expert comparison \u2014 the confirmatory answer to RQ2"
+  ]
+}

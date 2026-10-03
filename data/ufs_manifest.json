@@ -1,0 +1,247 @@
+{
+  "created_utc": "2026-08-03T09:03:02.376607+00:00",
+  "schema_version": "1.0.0",
+  "mcasm_version": "1.2.0",
+  "total_findings": 1009,
+  "distinct_resources": 340,
+  "provider_distribution": {
+    "aws": 699,
+    "azure": 211,
+    "gcp": 99
+  },
+  "ssvc_distribution": {
+    "Track": 643,
+    "Track*": 236,
+    "Attend": 130
+  },
+  "source_distribution": {
+    "bridgecrewio/terragoat": 445,
+    "BishopFox/iam-vulnerable": 269,
+    "ine-labs/AWSGoat": 215,
+    "ine-labs/GCPGoat": 43,
+    "ine-labs/AzureGoat": 37
+  },
+  "feature_density": {
+    "internet_reachable": 105,
+    "sensitive_port": 24,
+    "wildcard_actions": 63,
+    "wildcard_principals": 7,
+    "external_assumable": 7,
+    "hardcoded_secret": 81,
+    "public_read": 0,
+    "cross_account": 5,
+    "shared_infra": 58
+  },
+  "distinct_crs_values": 49,
+  "largest_tie_group_pct": 19.920713577799802,
+  "crs_weights": {
+    "exposure": 0.3,
+    "identity": 0.25,
+    "data": 0.2,
+    "blast": 0.15,
+    "intel": 0.1
+  },
+  "sources": {
+    "terragoat": {
+      "url": "https://github.com/bridgecrewio/terragoat.git",
+      "commit": "729f8da62c6a85ce4af5ad3d123de97776d954c4",
+      "terraform_files": 47
+    },
+    "awsgoat": {
+      "url": "https://github.com/ine-labs/AWSGoat.git",
+      "commit": "b24869ad455ed8d1393d00ecdc15ee638d1c1332",
+      "terraform_files": 2
+    },
+    "azuregoat": {
+      "url": "https://github.com/ine-labs/AzureGoat.git",
+      "commit": "b97045952e6df00de735a7f27fd7c4994dcfe8c0",
+      "terraform_files": 1
+    },
+    "gcpgoat": {
+      "url": "https://github.com/ine-labs/GCPGoat.git",
+      "commit": "44605c4bff4b2da7611dfce78696bb53db6d8c54",
+      "terraform_files": 1
+    },
+    "iam-vulnerable": {
+      "url": "https://github.com/BishopFox/iam-vulnerable.git",
+      "commit": "0f298666f9b7cfa01488b86912afdb211773188a",
+      "terraform_files": 59
+    },
+    "cnappgoat": {
+      "url": "https://github.com/ermetic-research/cnappgoat-scenarios.git",
+      "commit": "c98acdac710f03726e14ac1014c14bf5086659e0",
+      "terraform_files": 0
+    }
+  },
+  "coverage": {
+    "terragoat_aws": {
+      "blocks": [
+        {
+          "check_type": "terraform",
+          "passed": 115,
+          "failed": 215,
+          "parsing_errors": 0,
+          "resource_count": 64,
+          "checkov_version": "3.3.8"
+        },
+        {
+          "check_type": "dockerfile",
+          "passed": 2,
+          "failed": 2,
+          "parsing_errors": 0,
+          "resource_count": 1,
+          "checkov_version": "3.3.8"
+        },
+        {
+          "check_type": "secrets",
+          "passed": 0,
+          "failed": 4,
+          "parsing_errors": 0,
+          "resource_count": 4,
+          "checkov_version": "3.3.8"
+        }
+      ],
+      "dropped_non_cloud": 6
+    },
+    "terragoat_azure": {
+      "blocks": [
+        {
+          "check_type": "terraform",
+          "passed": 68,
+          "failed": 174,
+          "parsing_errors": 0,
+          "resource_count": 51,
+          "checkov_version": "3.3.8"
+        },
+        {
+          "check_type": "secrets",
+          "passed": 0,
+          "failed": 1,
+          "parsing_errors": 0,
+          "resource_count": 1,
+          "checkov_version": "3.3.8"
+        }
+      ],
+      "dropped_non_cloud": 1
+    },
+    "terragoat_gcp": {
+      "blocks": [
+        {
+          "check_type": "terraform",
+          "passed": 17,
+          "failed": 56,
+          "parsing_errors": 0,
+          "resource_count": 11,
+          "checkov_version": "3.3.8"
+        }
+      ],
+      "dropped_non_cloud": 0
+    },
+    "awsgoat": {
+      "blocks": [
+        {
+          "check_type": "terraform",
+          "passed": 215,
+          "failed": 215,
+          "parsing_errors": 0,
+          "resource_count": 286,
+          "checkov_version": "3.3.8"
+        },
+        {
+          "check_type": "dockerfile",
+          "passed": 140,
+          "failed": 3,
+          "parsing_errors": 0,
+          "resource_count": 1,
+          "checkov_version": "3.3.8"
+        },
+        {
+          "check_type": "secrets",
+          "passed": 0,
+          "failed": 1,
+          "parsing_errors": 0,
+          "resource_count": 1,
+          "checkov_version": "3.3.8"
+        },
+        {
+          "check_type": "github_actions",
+          "passed": 88,
+          "failed": 4,
+          "parsing_errors": 0,
+          "resource_count": 0,
+          "checkov_version": "3.3.8"
+        }
+      ],
+      "dropped_non_cloud": 8
+    },
+    "azuregoat": {
+      "blocks": [
+        {
+          "check_type": "terraform",
+          "passed": 22,
+          "failed": 37,
+          "parsing_errors": 0,
+          "resource_count": 36,
+          "checkov_version": "3.3.8"
+        }
+      ],
+      "dropped_non_cloud": 0
+    },
+    "gcpgoat": {
+      "blocks": [
+        {
+          "check_type": "terraform",
+          "passed": 21,
+          "failed": 43,
+          "parsing_errors": 0,
+          "resource_count": 54,
+          "checkov_version": "3.3.8"
+        }
+      ],
+      "dropped_non_cloud": 0
+    },
+    "iam_vulnerable": {
+      "blocks": [
+        {
+          "check_type": "terraform",
+          "passed": 719,
+          "failed": 269,
+          "parsing_errors": 0,
+          "resource_count": 282,
+          "checkov_version": "3.3.8"
+        },
+        {
+          "check_type": "github_actions",
+          "passed": 15,
+          "failed": 1,
+          "parsing_errors": 0,
+          "resource_count": 0,
+          "checkov_version": "3.3.8"
+        }
+      ],
+      "dropped_non_cloud": 1
+    },
+    "cnappgoat": {
+      "blocks": [
+        {
+          "check_type": "dockerfile",
+          "passed": 44,
+          "failed": 44,
+          "parsing_errors": 0,
+          "resource_count": 22,
+          "checkov_version": "3.3.8"
+        }
+      ],
+      "dropped_non_cloud": 44
+    }
+  },
+  "tool": "checkov",
+  "scan_flags": "-o json --quiet (NOT --compact)",
+  "limitations": [
+    "Terraform interpolations are not resolved; unresolved references default to not-exposed, biasing exposure detection downward.",
+    "Open-source Checkov supplies no severity or benchmark mappings; scanner_severity is null throughout.",
+    "CNAPPgoat contributes no findings: it is written in Pulumi, which Checkov cannot parse. It is retained for its scenario taxonomy.",
+    "Findings are per-check, so one resource may yield several. Resource-level aggregation happens in Notebook 02.",
+    "IaC analysis is a proxy for runtime state; configuration drift is not captured."
+  ]
+}
